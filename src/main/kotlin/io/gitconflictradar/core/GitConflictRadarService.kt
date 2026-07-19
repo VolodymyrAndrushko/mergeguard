@@ -310,7 +310,14 @@ class GitConflictRadarService(private val project: Project) : Disposable {
         alarm.cancelAllRequests()
         val settings = GitConflictRadarSettings.getInstance().state
         if (!settings.backgroundFetchEnabled || project.isDisposed) return
-        alarm.addRequest({ refresh(fetch = true) }, settings.fetchIntervalMinutes.coerceIn(1, 120) * 60_000)
+        
+        val delayMs = if (snapshots.get().isEmpty()) {
+            5000 // Retry in 5 seconds if repositories haven't loaded yet
+        } else {
+            settings.fetchIntervalMinutes.coerceIn(1, 120) * 60_000
+        }
+        
+        alarm.addRequest({ refresh(fetch = true) }, delayMs)
     }
 
     private val knownWarnings = java.util.concurrent.ConcurrentHashMap.newKeySet<Pair<String, String>>()

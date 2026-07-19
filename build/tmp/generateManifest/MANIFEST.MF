@@ -1,5 +1,5 @@
 Created-By: Gradle 9.0-milestone-1
-Version: 0.1.0-SNAPSHOT
+Version: 0.1.1
 Build-JVM: 17.0.14 (Eclipse Adoptium 17.0.14+7)
 Build-OS: Windows 10 10.0 amd64
 Build-Plugin: IntelliJ Platform Gradle Plugin

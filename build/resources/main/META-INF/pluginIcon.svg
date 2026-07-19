@@ -1,0 +1,41 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="512" height="512" rx="112" fill="#023b6d"/>
+  
+  <!-- Radar Base -->
+  <g transform="translate(256, 256)">
+    <!-- Outer radar circle -->
+    <circle cx="0" cy="0" r="180" fill="none" stroke="#ffffff" stroke-width="28"/>
+    
+    <!-- Radar Vertical line (top half) -->
+    <line x1="0" y1="0" x2="0" y2="-180" stroke="#ffffff" stroke-width="24"/>
+    <!-- Radar Horizontal line (right half) -->
+    <line x1="0" y1="0" x2="180" y2="0" stroke="#ffffff" stroke-width="24"/>
+    
+    <!-- Diagonal Radar Sweep line -->
+    <line x1="0" y1="0" x2="127" y2="-127" stroke="#ffffff" stroke-width="24"/>
+
+    <!-- Concentric Arcs in Top-Right Quadrant -->
+    <path d="M 0 -60 A 60 60 0 0 1 60 0" fill="none" stroke="#ffffff" stroke-width="24"/>
+    <path d="M 0 -120 A 120 120 0 0 1 120 0" fill="none" stroke="#ffffff" stroke-width="24"/>
+    
+    <!-- Solid wedge in Bottom-Right -->
+    <path d="M 0 0 L 180 0 A 180 180 0 0 1 127 127 Z" fill="#ffffff"/>
+  </g>
+
+  <!-- Git Branch (Orange) -->
+  <g stroke="#ff5e00" stroke-width="24" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Lines connecting nodes -->
+    <line x1="190" y1="410" x2="190" y2="190" />
+    <line x1="190" y1="310" x2="270" y2="250" />
+    <line x1="270" y1="250" x2="190" y2="190" />
+  </g>
+  
+  <g fill="#023b6d" stroke="#ff5e00" stroke-width="16">
+    <!-- Nodes -->
+    <circle cx="190" cy="410" r="24"/>
+    <circle cx="190" cy="310" r="24"/>
+    <circle cx="190" cy="190" r="24"/>
+    <circle cx="270" cy="250" r="24"/>
+  </g>
+</svg>

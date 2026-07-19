@@ -3,7 +3,27 @@
   <name>GitConflictRadar</name>
   <vendor email="hello@gitconflictradar.io">GitConflictRadar</vendor>
   <description><![CDATA[
-    Detects potential Git merge conflicts before they interrupt your workflow.
+    <h3>See Merge Conflicts Before They Happen</h3>
+    <p>Stop getting caught off-guard by painful merge conflicts right when you are ready to pull, merge, or push. <b>GitConflictRadar</b> acts as an early warning system for your IDE, silently scanning your repository in the background to detect if your coworkers are modifying the exact same lines of code as you.</p>
+    <p>When a conflict is detected, GitConflictRadar places an interactive, non-intrusive block directly into your editor over the affected lines—so you can see what is happening without ever leaving your flow.</p>
+    
+    <h4>✨ Key Features</h4>
+    <ul>
+      <li><b>Real-Time Editor Inlays</b>: View exactly which lines of code have upstream conflicts without needing to pull or run Git commands.</li>
+      <li><b>Smart Categorization</b>: Instantly distinguish between "Real Conflicts" (from active Pull Requests or your target branch) and "Potential Conflicts" (from other parallel feature branches).</li>
+      <li><b>Interactive Code Blocks</b>: Click on a conflict inlay to collapse or expand the code snippet to save vertical screen space.</li>
+      <li><b>Instant Diffing</b>: Double-click any conflict block to immediately open the standard IntelliJ side-by-side Diff Window and see exactly what the other person changed.</li>
+      <li><b>Zero Configuration</b>: No API keys, tokens, or GitHub/GitLab logins required. It works seamlessly using your machine's existing native Git configuration.</li>
+      <li><b>Background Processing</b>: Runs quietly on a pooled thread so it never slows down your IDE or interrupts your typing.</li>
+    </ul>
+
+    <h4>🚀 How It Works</h4>
+    <ol>
+      <li>You edit a file.</li>
+      <li>In the background, the plugin occasionally runs <code>git fetch</code> to download upstream repository metadata.</li>
+      <li>If a coworker has pushed a commit that modifies the exact same hunk of code you are currently working on, a colored radar block immediately appears in your editor.</li>
+      <li>You resolve the design discrepancy with your coworker early, rather than dealing with a broken build later.</li>
+    </ol>
   ]]></description>
 
   <depends>com.intellij.modules.platform</depends>
