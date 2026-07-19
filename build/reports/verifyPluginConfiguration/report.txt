@@ -1,0 +1,2 @@
+- The since-build='241' is lower than the target IntelliJ Platform major version: '242'.
+- The Java configuration specifies sourceCompatibility='17' but IntelliJ Platform '2024.2.5' requires sourceCompatibility='21'.
