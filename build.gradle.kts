@@ -1,10 +1,10 @@
 plugins {
-    kotlin("jvm") version "1.9.24"
-    id("org.jetbrains.intellij.platform") version "2.2.1"
+    kotlin("jvm") version "2.3.20"
+    id("org.jetbrains.intellij.platform") version "2.18.1"
 }
 
 group = "io.gitconflictradar"
-version = "0.1.2"
+version = "0.1.3"
 
 repositories {
     mavenCentral()
@@ -15,8 +15,7 @@ repositories {
 
 dependencies {
     intellijPlatform {
-        // 2024.2 avoids a malformed bundled Code With Me descriptor in the 2024.1 archive.
-        intellijIdeaCommunity("2024.2.5")
+        intellijIdea("2026.1.4")
         bundledPlugin("Git4Idea")
     }
 }
@@ -29,7 +28,7 @@ intellijPlatform {
     pluginConfiguration {
         ideaVersion {
             sinceBuild = "241"
-            untilBuild = "251.*"
+            untilBuild = "261.*"
         }
     }
 }
